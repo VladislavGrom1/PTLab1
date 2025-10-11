@@ -13,12 +13,12 @@ class XmlDataReader(DataReader):
         root = tree.getroot()
 
         for student_elem in root:
-            student_name = student_elem.tag.strip()
+            student_name = student_elem.get("name")
             if not student_name:
                 continue
             subjects = []
             for subject_elem in student_elem:
-                subject_name = subject_elem.tag.strip()
+                subject_name = subject_elem.get("name")
                 score_text = subject_elem.text
                 if not subject_name or not score_text:
                     continue
