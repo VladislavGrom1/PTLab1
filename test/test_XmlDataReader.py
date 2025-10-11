@@ -52,4 +52,3 @@ class TestXmlDataReader:
         reader = XmlDataReader()
         parsed_data = reader.read(xml_filepath_and_data[0])
         assert parsed_data == xml_filepath_and_data[1]
-
