@@ -10,16 +10,16 @@ class TestXmlDataReader:
         xml_content = (
             '<?xml version="1.0" encoding="UTF-8"?>\n'
             '<root>\n'
-            '  <Иванов Иван Иванович>\n'
-            '    <математика>67</математика>\n'
-            '    <литература>100</литература>\n'
-            '    <программирование>91</программирование>\n'
-            '  </Иванов Иван Иванович>\n'
-            '  <Петров Петр Петрович>\n'
-            '    <математика>78</математика>\n'
-            '    <химия>87</химия>\n'
-            '    <социология>61</социология>\n'
-            '  </Петров Петр Петрович>\n'
+            '  <student name="Иванов Иван Иванович">\n'
+            '    <subject name="математика">67</subject>\n'
+            '    <subject name="литература">100</subject>\n'
+            '    <subject name="программирование">91</subject>\n'
+            '  </student>\n'
+            '  <student name="Петров Петр Петрович">\n'
+            '    <subject name="математика">78</subject>\n'
+            '    <subject name="химия">87</subject>\n'
+            '    <subject name="социология">61</subject>\n'
+            '  </student>\n'
             '</root>\n'
         )
         expected_data: DataType = {
@@ -52,3 +52,4 @@ class TestXmlDataReader:
         reader = XmlDataReader()
         parsed_data = reader.read(xml_filepath_and_data[0])
         assert parsed_data == xml_filepath_and_data[1]
+
