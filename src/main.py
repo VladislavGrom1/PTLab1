@@ -2,10 +2,10 @@
 import argparse
 import sys
 
-from CalcRating import CalcRating
-from TextDataReader import TextDataReader
-from XmlDataReader import XmlDataReader
-from FindBestStudent import FindBestStudent
+from src.CalcRating import CalcRating
+from src.TextDataReader import TextDataReader
+from src.XmlDataReader import XmlDataReader
+from src.FindBestStudent import FindBestStudent
 
 
 def get_path_from_arguments(args) -> str:
