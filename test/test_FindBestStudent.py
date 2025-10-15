@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from src.Types import DataType
 from src.FindBestStudent import FindBestStudent
 import pytest
@@ -14,13 +11,13 @@ class TestFindPerfectStudent:
             "Иванов Иван Иванович": [
                 ("математика", 100),
                 ("литература", 100),
-                ("программирование", 100)
+                ("программирование", 100),
             ],
             "Петров Петр Петрович": [
                 ("математика", 90),
                 ("химия", 87),
-                ("социология", 61)
-            ]
+                ("социология", 61),
+            ],
         }
 
     @pytest.fixture()
@@ -28,12 +25,12 @@ class TestFindPerfectStudent:
         return {
             "Иванов Иван Иванович": [
                 ("математика", 99),
-                ("физика", 100)
+                ("физика", 100),
             ],
             "Петров Петр Петрович": [
                 ("биология", 100),
-                ("география", 95)
-            ]
+                ("география", 95),
+            ],
         }
 
     @pytest.fixture()
@@ -41,13 +38,13 @@ class TestFindPerfectStudent:
         return {
             "Иванов Иван Иванович": [
                 ("математика", 100),
-                ("литература", 100)
+                ("литература", 100),
             ],
             "Петров Петр Петрович": [
                 ("химия", 100),
                 ("биология", 100),
-                ("история", 100)
-            ]
+                ("история", 100),
+            ],
         }
 
     def test_find_with_best_student(
